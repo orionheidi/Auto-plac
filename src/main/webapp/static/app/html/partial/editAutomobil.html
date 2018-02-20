@@ -1,0 +1,24 @@
+<h1>Izmeni Automobil</h1>
+
+<div class="container">
+	<form class="form">
+		<div class="form-group">
+			<form>
+				marka:<select class="form-control"
+      			ng-options="prepMarka(marka) for marka in marke track by marka.id"
+      				ng-model="model.marka">
+  				</select>
+				model:
+				<select class="form-control"
+      			ng-options="prepModel(model) for model in modeli track by model.id"
+      				ng-model="automobil.model">
+  				</select>
+				godiste:<input ng-model="automobil.godiste" class="form-control">
+				kilometraza:<input ng-model="automobil.kilometraza" class="form-control">
+				cena:<input ng-model="automobil.cena" class="form-control">
+				<button ng-click="save()" class="btn btn-success">sacuvaj</button>
+			</form>
+		</div>
+	
+	</form>
+</div>
